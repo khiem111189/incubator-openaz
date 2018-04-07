@@ -10,3 +10,9 @@ target
 build
 dist
 
+openaz-xacml-test/src/test/resources/testsets/healthcare/results/Response.2.Permit.json
+openaz-xacml-test/src/test/resources/testsets/healthcare/results/Response.3.Permit.json
+openaz-xacml-test/src/test/resources/testsets/healthcare/results/Response.4.Permit.json
+openaz-xacml-test/src/test/resources/testsets/healthcare/results/Response.5.Permit.json
+openaz-xacml-test/src/test/resources/testsets/healthcare/results/Response.6.Permit.json
+openaz-xacml-test/src/test/resources/testsets/healthcare/results/Response.7.Deny.json

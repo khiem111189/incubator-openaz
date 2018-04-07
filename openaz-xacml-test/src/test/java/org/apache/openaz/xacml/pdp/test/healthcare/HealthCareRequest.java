@@ -16,10 +16,27 @@ public class HealthCareRequest {
 	public Object role;
 	@XACMLSubject(attributeId="party-type")
 	public Object partyType;
-	public enum SUBJECT {
-		USER_ID,
-		ROLE,
-		PARTY_TYPE
+	public enum ATTRIBUTE {
+		SUBJECT_USER_ID,
+		SUBJECT_ROLE,
+		SUBJECT_PARTY_TYPE,
+		
+		RESOURCE_RESOURCE_TYPE,
+		RESOURCE_PATIENT_STATUS,
+		RESOURCE_PATIENT_RELATIVE_PASSPORT_ID,
+		RESOURCE_PATIENT_CONSCIOUS_STATUS,
+		RESOURCE_PATIENT_RECORD_DEPARTMENT,
+		RESOURCE_PATIENT_RECORD_ASSIGNED_DOCTOR_ID,
+		RESOURCE_PATIENT_RECORD_ASSIGNED_NURSE_ID,
+		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_DOCTOR,
+		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_RELATIVE_PASSPORT_ID,
+		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_START_TIME,
+		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_END_TIME,
+		
+		ACTION_ACTION_TYPE,
+		
+		ENVIRONMENT_LOCATION,
+		ENVIRONMENT_CURRENT_TIME
 	}
 	
 	@XACMLResource(attributeId="resource-type")
@@ -40,48 +57,40 @@ public class HealthCareRequest {
 	public Object patientEmergencyAgreementDoctor;
 	@XACMLResource(attributeId="patient:emgergency-agreement:relative-passport-id")
 	public Object patientEmergencyAgreementRelativePassportId;
-	public enum RESOURCE {
-		RESOURCE_TYPE,
-		PATIENT_STATUS,
-		PATIENT_RELATIVE_PASSPORT_ID,
-		PATIENT_CONSCIOUS_STATUS,
-		PATIENT_RECORD_DEPARTMENT,
-		PATIENT_RECORD_ASSIGNED_DOCTOR_ID,
-		PATIENT_RECORD_ASSIGNED_NURSE_ID,
-		PATIENT_EMERGENCY_AGREEMENT_DOCTOR,
-		PATIENT_EMERGENCY_AGREEMENT_RELATIVE_PASSPORT_ID
-	}
+	@XACMLResource(attributeId="patient:emgergency-agreement:start-time")
+	public Object patientEmergencyAgreementStartTime;
+	@XACMLResource(attributeId="patient:emgergency-agreement:end-time")
+	public Object patientEmergencyAgreementEndTime;
 	
 	@XACMLAction(attributeId="action-type")
 	public Object actionType;
-	public enum ACTION {
-		ACTION_TYPE
-	}
 	
 	@XACMLEnvironment(attributeId="location")
 	public Object location;
-	public enum ENVIRONMENT {
-		LOCATION
-	}
+	@XACMLEnvironment(attributeId="current-time")
+	public Object currentTime;
 	
 	public HealthCareRequest(Map<Enum<?>, Object> objects) {
-		this.userId = objects.get(SUBJECT.USER_ID);
-		this.role = objects.get(SUBJECT.ROLE);
-		this.partyType = objects.get(SUBJECT.PARTY_TYPE);
+		this.userId = objects.get(ATTRIBUTE.SUBJECT_USER_ID);
+		this.role = objects.get(ATTRIBUTE.SUBJECT_ROLE);
+		this.partyType = objects.get(ATTRIBUTE.SUBJECT_PARTY_TYPE);
 		
-		this.resourceType = objects.get(RESOURCE.RESOURCE_TYPE);
-		this.patientStatus = objects.get(RESOURCE.PATIENT_STATUS);
-		this.patientRelativePassportId = objects.get(RESOURCE.PATIENT_RELATIVE_PASSPORT_ID);
-		this.patientConsciousStatus = objects.get(RESOURCE.PATIENT_CONSCIOUS_STATUS);
-		this.patientRecordDepartment = objects.get(RESOURCE.PATIENT_RECORD_DEPARTMENT);
-		this.patientRecordAssignedDoctorId = objects.get(RESOURCE.PATIENT_RECORD_ASSIGNED_DOCTOR_ID);
-		this.patientRecordAssignedNurseId = objects.get(RESOURCE.PATIENT_RECORD_ASSIGNED_NURSE_ID);
-		this.patientEmergencyAgreementDoctor = objects.get(RESOURCE.PATIENT_EMERGENCY_AGREEMENT_DOCTOR);
-		this.patientEmergencyAgreementRelativePassportId = objects.get(RESOURCE.PATIENT_EMERGENCY_AGREEMENT_RELATIVE_PASSPORT_ID);
+		this.resourceType = objects.get(ATTRIBUTE.RESOURCE_RESOURCE_TYPE);
+		this.patientStatus = objects.get(ATTRIBUTE.RESOURCE_PATIENT_STATUS);
+		this.patientRelativePassportId = objects.get(ATTRIBUTE.RESOURCE_PATIENT_RELATIVE_PASSPORT_ID);
+		this.patientConsciousStatus = objects.get(ATTRIBUTE.RESOURCE_PATIENT_CONSCIOUS_STATUS);
+		this.patientRecordDepartment = objects.get(ATTRIBUTE.RESOURCE_PATIENT_RECORD_DEPARTMENT);
+		this.patientRecordAssignedDoctorId = objects.get(ATTRIBUTE.RESOURCE_PATIENT_RECORD_ASSIGNED_DOCTOR_ID);
+		this.patientRecordAssignedNurseId = objects.get(ATTRIBUTE.RESOURCE_PATIENT_RECORD_ASSIGNED_NURSE_ID);
+		this.patientEmergencyAgreementDoctor = objects.get(ATTRIBUTE.RESOURCE_PATIENT_EMERGENCY_AGREEMENT_DOCTOR);
+		this.patientEmergencyAgreementRelativePassportId = objects.get(ATTRIBUTE.RESOURCE_PATIENT_EMERGENCY_AGREEMENT_RELATIVE_PASSPORT_ID);
+		this.patientEmergencyAgreementStartTime = objects.get(ATTRIBUTE.RESOURCE_PATIENT_EMERGENCY_AGREEMENT_START_TIME);
+		this.patientEmergencyAgreementEndTime = objects.get(ATTRIBUTE.RESOURCE_PATIENT_EMERGENCY_AGREEMENT_END_TIME);
 		
-		this.actionType = objects.get(ACTION.ACTION_TYPE);
+		this.actionType = objects.get(ATTRIBUTE.ACTION_ACTION_TYPE);
 		
-		this.location = objects.get(ENVIRONMENT.LOCATION);
+		this.location = objects.get(ATTRIBUTE.ENVIRONMENT_LOCATION);
+		this.currentTime = objects.get(ATTRIBUTE.ENVIRONMENT_CURRENT_TIME);
 		 
 	}
 	

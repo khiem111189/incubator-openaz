@@ -1,0 +1,89 @@
+{
+  "Request" : {
+    "CombinedDecision" : false,
+    "Category" : [ {
+      "CategoryId" : "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject",
+      "Attribute" : [ {
+        "AttributeId" : "user-id",
+        "Value" : "Doctor-Emer-Agreement",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "role",
+        "Value" : "Doctor",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      } ]
+    }, {
+      "CategoryId" : "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
+      "Attribute" : [ {
+        "AttributeId" : "resource-type",
+        "Value" : "Patient.Record",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:management-info:status",
+        "Value" : "NotAvailableNurseDoctor",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:management-info:relative-passport-id",
+        "Value" : "Patient-Relative",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:management-info:conscious-status",
+        "Value" : "Unconscious",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:record:department",
+        "Value" : "Heart",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:emgergency-agreement:doctor",
+        "Value" : "Doctor-Emer-Agreement",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:emgergency-agreement:relative-passport-id",
+        "Value" : "Patient-Relative",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:emgergency-agreement:start-time",
+        "Value" : 1.52311673168E12,
+        "DataType" : "http://www.w3.org/2001/XMLSchema#double",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:emgergency-agreement:end-time",
+        "Value" : 1.52313113168E12,
+        "DataType" : "http://www.w3.org/2001/XMLSchema#double",
+        "IncludeInResult" : false
+      } ]
+    }, {
+      "CategoryId" : "urn:oasis:names:tc:xacml:3.0:attribute-category:action",
+      "Attribute" : [ {
+        "AttributeId" : "action-type",
+        "Value" : "Read",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      } ]
+    }, {
+      "CategoryId" : "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+      "Attribute" : [ {
+        "AttributeId" : "location",
+        "Value" : "Heart",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "current-time",
+        "Value" : 1.52312393168E12,
+        "DataType" : "http://www.w3.org/2001/XMLSchema#double",
+        "IncludeInResult" : false
+      } ]
+    } ],
+    "ReturnPolicyIdList" : true
+  }
+}

@@ -5,7 +5,7 @@
       "CategoryId" : "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject",
       "Attribute" : [ {
         "AttributeId" : "user-id",
-        "Value" : "Doctor-Patient",
+        "Value" : "Doctor-Emer-Agreement",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
@@ -23,7 +23,12 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:management-info:status",
-        "Value" : "AvailableNurseDoctor",
+        "Value" : "NotAvailableNurseDoctor",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:management-info:conscious-status",
+        "Value" : "Conscious",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
@@ -32,9 +37,19 @@
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
-        "AttributeId" : "patient:record:assigned-doctor-id",
-        "Value" : "Doctor-Patient",
+        "AttributeId" : "patient:emgergency-agreement:doctor",
+        "Value" : "Doctor-Emer-Agreement",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:emgergency-agreement:start-time",
+        "Value" : 1.523116731602E12,
+        "DataType" : "http://www.w3.org/2001/XMLSchema#double",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:emgergency-agreement:end-time",
+        "Value" : 1.523131131602E12,
+        "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]
     }, {
@@ -43,6 +58,19 @@
         "AttributeId" : "action-type",
         "Value" : "Read",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      } ]
+    }, {
+      "CategoryId" : "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+      "Attribute" : [ {
+        "AttributeId" : "location",
+        "Value" : "Heart",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "current-time",
+        "Value" : 1.523123931602E12,
+        "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]
     } ],

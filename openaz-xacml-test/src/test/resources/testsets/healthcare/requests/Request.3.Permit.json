@@ -4,13 +4,13 @@
     "Category" : [ {
       "CategoryId" : "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject",
       "Attribute" : [ {
-        "AttributeId" : "user-id",
-        "Value" : "Doctor-Patient",
+        "AttributeId" : "role",
+        "Value" : "External",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
-        "AttributeId" : "role",
-        "Value" : "Doctor",
+        "AttributeId" : "party-type",
+        "Value" : "Pharmacy",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       } ]
@@ -18,22 +18,7 @@
       "CategoryId" : "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
       "Attribute" : [ {
         "AttributeId" : "resource-type",
-        "Value" : "Patient.Record",
-        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
-        "IncludeInResult" : false
-      }, {
-        "AttributeId" : "patient:management-info:status",
-        "Value" : "AvailableNurseDoctor",
-        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
-        "IncludeInResult" : false
-      }, {
-        "AttributeId" : "patient:record:department",
-        "Value" : "Heart",
-        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
-        "IncludeInResult" : false
-      }, {
-        "AttributeId" : "patient:record:assigned-doctor-id",
-        "Value" : "Doctor-Patient",
+        "Value" : "Patient.Record.Medicines",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       } ]

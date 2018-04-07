@@ -5,12 +5,12 @@
       "CategoryId" : "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject",
       "Attribute" : [ {
         "AttributeId" : "user-id",
-        "Value" : "Doctor-Patient",
+        "Value" : "Nurse-Patient",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "role",
-        "Value" : "Doctor",
+        "Value" : "Nurse",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       } ]
@@ -32,8 +32,8 @@
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
-        "AttributeId" : "patient:record:assigned-doctor-id",
-        "Value" : "Doctor-Patient",
+        "AttributeId" : "patient:record:assigned-nurse-id",
+        "Value" : "Nurse-Patient",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       } ]
