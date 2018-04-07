@@ -1,0 +1,66 @@
+{
+  "Request" : {
+    "CombinedDecision" : false,
+    "Category" : [ {
+      "CategoryId" : "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject",
+      "Attribute" : [ {
+        "AttributeId" : "user-id",
+        "Value" : "Alice",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "role",
+        "Value" : "Nurse",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "party-type",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "resource-type",
+        "Value" : "Patient.Record",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:management-info:status",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:management-info:relative-passport-id",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:management-info:conscious-status",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:record:department",
+        "Value" : "Heart",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:record:assigned-doctor-id",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:record:assigned-nurse-id",
+        "Value" : "Alice",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:emgergency-agreement:doctor",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:emgergency-agreement:relative-passport-id",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "action-type",
+        "Value" : "Read",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "location",
+        "Value" : "Heart",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      } ]
+    } ],
+    "ReturnPolicyIdList" : true
+  }
+}
