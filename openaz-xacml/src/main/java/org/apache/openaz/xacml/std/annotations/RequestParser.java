@@ -30,22 +30,49 @@
  */
 package org.apache.openaz.xacml.std.annotations;
 
+import java.lang.reflect.Array;
+import java.lang.reflect.Field;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import javax.security.auth.x500.X500Principal;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.openaz.xacml.api.*;
-import org.apache.openaz.xacml.std.*;
-import org.apache.openaz.xacml.std.datatypes.*;
+import org.apache.openaz.xacml.api.AttributeValue;
+import org.apache.openaz.xacml.api.DataType;
+import org.apache.openaz.xacml.api.DataTypeException;
+import org.apache.openaz.xacml.api.DataTypeFactory;
+import org.apache.openaz.xacml.api.Identifier;
+import org.apache.openaz.xacml.api.Request;
+import org.apache.openaz.xacml.api.RequestAttributesReference;
+import org.apache.openaz.xacml.api.XACML3;
+import org.apache.openaz.xacml.std.IdentifierImpl;
+import org.apache.openaz.xacml.std.StdMutableAttribute;
+import org.apache.openaz.xacml.std.StdMutableRequest;
+import org.apache.openaz.xacml.std.StdMutableRequestAttributes;
+import org.apache.openaz.xacml.std.StdRequestAttributesReference;
+import org.apache.openaz.xacml.std.StdRequestDefaults;
+import org.apache.openaz.xacml.std.StdRequestReference;
+import org.apache.openaz.xacml.std.datatypes.Base64Binary;
+import org.apache.openaz.xacml.std.datatypes.HexBinary;
+import org.apache.openaz.xacml.std.datatypes.IPAddress;
+import org.apache.openaz.xacml.std.datatypes.ISO8601Date;
+import org.apache.openaz.xacml.std.datatypes.ISO8601DateTime;
+import org.apache.openaz.xacml.std.datatypes.ISO8601Time;
+import org.apache.openaz.xacml.std.datatypes.RFC2396DomainName;
+import org.apache.openaz.xacml.std.datatypes.RFC822Name;
+import org.apache.openaz.xacml.std.datatypes.XPathDayTimeDuration;
+import org.apache.openaz.xacml.std.datatypes.XPathYearMonthDuration;
 import org.apache.openaz.xacml.util.AttributeUtils;
 import org.apache.openaz.xacml.util.FactoryException;
 import org.w3c.dom.Node;
 import org.w3c.dom.xpath.XPathExpression;
-
-import javax.security.auth.x500.X500Principal;
-
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
-import java.net.URI;
-import java.util.*;
 
 public class RequestParser {
     private static Log logger = LogFactory.getLog(RequestParser.class);
@@ -112,6 +139,9 @@ public class RequestParser {
         // Iterate all the fields in the object
         //
         for (Field field : obj.getClass().getDeclaredFields()) {
+        	if (field.get(obj) == null) {
+        		continue;
+        	}
             if (logger.isTraceEnabled()) {
                 logger.trace("Field: " + field);
             }
@@ -220,7 +250,7 @@ public class RequestParser {
         boolean added = false;
         for (StdMutableRequestAttributes a : attributes) {
             if (a.getCategory().equals(mutableAttribute.getCategory())
-                && id != null ? a.getXmlId().equals(id) : a.getXmlId() == null ? true : false) {
+                && (id != null ? a.getXmlId().equals(id) : a.getXmlId() == null ? true : false)) {
                 //
                 // Category exists, add in the attribute values
                 //
