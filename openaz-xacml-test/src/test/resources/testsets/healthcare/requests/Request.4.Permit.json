@@ -18,6 +18,11 @@
       "CategoryId" : "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
       "Attribute" : [ {
         "AttributeId" : "resource-type",
+        "Value" : "Patient.Record",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "resource-path",
         "Value" : "Patient.Record.Billing",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false

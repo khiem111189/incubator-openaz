@@ -27,6 +27,11 @@
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
+        "AttributeId" : "patient:management-info:own-emergency-policies",
+        "Value" : "true",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
         "AttributeId" : "patient:management-info:conscious-status",
         "Value" : "Conscious",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
@@ -43,12 +48,12 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:start-time",
-        "Value" : 1.523523988131E12,
+        "Value" : 1.52369495959E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:end-time",
-        "Value" : 1.523538388131E12,
+        "Value" : 1.52370935959E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]
@@ -69,7 +74,7 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "current-time",
-        "Value" : 1.523531188131E12,
+        "Value" : 1.52370215959E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]

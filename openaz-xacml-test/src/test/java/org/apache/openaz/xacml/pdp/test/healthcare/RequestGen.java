@@ -17,16 +17,27 @@ import org.apache.openaz.xacml.std.annotations.XACMLAction;
 import org.apache.openaz.xacml.std.annotations.XACMLEnvironment;
 import org.apache.openaz.xacml.std.annotations.XACMLResource;
 import org.apache.openaz.xacml.std.annotations.XACMLSubject;
+import org.apache.openaz.xacml.std.jaxp.JaxpRequest;
 import org.apache.openaz.xacml.std.json.JSONRequest;
 
 public class RequestGen {
+	private static final String REQ_FOLDER_PATH = "src/test/resources/testsets/healthcare/requests";
+	private static final String XML_REQ_FOLDER_PATH = "src/test/resources/testsets/healthcare/xml-requests";
+	private static final String REQ_PATH = REQ_FOLDER_PATH + "/Request.";
+
 	public enum Result {
-		Permit,
-		Deny,
-		In,
-		NA
+		Permit("Permit"),
+		Deny("Deny"),
+		In("Indeterminate"),
+		NA("NA");
+		
+		String fullname;
+		private Result(String fullname) {
+			this.fullname = fullname;
+		}
 	}
 	public static void main(String[] args) throws Exception {
+		FileUtils.cleanDirectory(new File(REQ_FOLDER_PATH));
 		try (BufferedReader br = new BufferedReader(new FileReader("src/test/resources/testsets/healthcare/requests.csv"))) {
 			boolean firstDone = false;
 			for (String line; (line = br.readLine()) != null;) {
@@ -69,7 +80,8 @@ public class RequestGen {
 				String smtReq = smtReqParse(res, req, false);
 				System.out.println(smtReq);
 				Request request = RequestParser.parseRequest(req);
-				FileUtils.write(new File("E:\\Workspace\\Thesis\\openaz-work\\openaz-xacml-test\\src\\test\\resources\\testsets\\healthcare\\requests\\Request." + stt + "."+ res.name() + ".json"), JSONRequest.toString(request));
+				FileUtils.write(new File(REQ_PATH + stt + "."+ res.fullname + ".json"), JSONRequest.toString(request));
+				FileUtils.write(new File(XML_REQ_FOLDER_PATH + "/Request." + stt + "."+ res.fullname + ".xml"), JaxpRequest.toXmlRequest(request));
 			}
 		}
 		
@@ -189,7 +201,7 @@ public class RequestGen {
 		return now.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
 	}
 	
-	public static Object req(Object[] input) {
+	public static Object req(Object[] input) throws IllegalArgumentException, IllegalAccessException {
 		return new HealthCareRequest(map(input));
 	}
 	

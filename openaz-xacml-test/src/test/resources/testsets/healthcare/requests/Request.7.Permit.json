@@ -5,7 +5,7 @@
       "CategoryId" : "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject",
       "Attribute" : [ {
         "AttributeId" : "user-id",
-        "Value" : "Doctor-Patient",
+        "Value" : "Doctor-Non-Patient",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
@@ -23,17 +23,17 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:management-info:status",
-        "Value" : "AvailableNurseDoctor",
+        "Value" : "NotAvailableNurseDoctor",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
+        "AttributeId" : "patient:management-info:own-emergency-policies",
+        "Value" : "false",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:record:department",
         "Value" : "Heart",
-        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
-        "IncludeInResult" : false
-      }, {
-        "AttributeId" : "patient:record:assigned-doctor-id",
-        "Value" : "Doctor-Patient",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       } ]
@@ -42,6 +42,14 @@
       "Attribute" : [ {
         "AttributeId" : "action-type",
         "Value" : "Read",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      } ]
+    }, {
+      "CategoryId" : "urn:oasis:names:tc:xacml:3.0:attribute-category:environment",
+      "Attribute" : [ {
+        "AttributeId" : "location",
+        "Value" : "Heart",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       } ]

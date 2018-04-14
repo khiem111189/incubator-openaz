@@ -10,6 +10,7 @@ import org.apache.openaz.xacml.pdp.test.TestBase;
 import org.apache.openaz.xacml.util.FactoryException;
 
 public class TestHealthCare extends TestBase {
+	private static final String HEALTH_CARE_FOLDER_PATH = "src/test/resources/testsets/healthcare";
 	private static final Log logger = LogFactory.getLog(TestHealthCare.class);
 
 	public TestHealthCare(String[] args) throws ParseException,
@@ -21,7 +22,7 @@ public class TestHealthCare extends TestBase {
 		try {
 			String[] inputs = new String[] {
 					"-dir",
-					"E:\\Workspace\\Thesis\\openaz-work\\openaz-xacml-test\\src\\test\\resources\\testsets\\healthcare" };
+					HEALTH_CARE_FOLDER_PATH };
 			new TestHealthCare(inputs).run();
 		} catch (ParseException | IOException | FactoryException e) {
 			logger.error(e);

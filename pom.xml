@@ -55,6 +55,7 @@
         <version.mockito>1.10.19</version.mockito>
         <version.log4j>1.2.17</version.log4j>
         <version.xmlapi>1.4.01</version.xmlapi>
+        <version.json>20180130</version.json>
     </properties>
     <modules>
         <module>openaz-xacml</module>
@@ -68,6 +69,11 @@
     </modules>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.json</groupId>
+                <artifactId>json</artifactId>
+                <version>${version.json}</version>
+            </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
