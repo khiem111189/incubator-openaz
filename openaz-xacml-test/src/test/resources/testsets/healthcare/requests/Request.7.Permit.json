@@ -13,6 +13,11 @@
         "Value" : "Doctor",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
+      }, {
+        "AttributeId" : "position",
+        "Value" : "SeniorConsultant",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
       } ]
     }, {
       "CategoryId" : "urn:oasis:names:tc:xacml:3.0:attribute-category:resource",
@@ -28,7 +33,7 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:management-info:own-emergency-policies",
-        "Value" : "false",
+        "Value" : "No",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {

@@ -5,17 +5,17 @@
       "CategoryId" : "urn:oasis:names:tc:xacml:1.0:subject-category:access-subject",
       "Attribute" : [ {
         "AttributeId" : "user-id",
-        "Value" : "Doctor-Emer-Agreement",
+        "Value" : "Nurse-Non-Patient",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "role",
-        "Value" : "Doctor",
+        "Value" : "Nurse",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "position",
-        "Value" : "SeniorConsultant",
+        "Value" : "NurseUnitManager",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       } ]
@@ -48,17 +48,17 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:medical-staff",
-        "Value" : "Doctor-Emer-Agreement",
+        "Value" : "Nurse-Non-Patient",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:start-time",
-        "Value" : 1.524159618582E12,
+        "Value" : 1.524163218836E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:end-time",
-        "Value" : 1.524174018582E12,
+        "Value" : 1.524170418836E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]
@@ -79,7 +79,7 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "current-time",
-        "Value" : 1.524166818582E12,
+        "Value" : 1.524166818836E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]

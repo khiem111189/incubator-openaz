@@ -27,6 +27,11 @@
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
+        "AttributeId" : "resource-path",
+        "Value" : "Patient.Record.HeartDiagnostic",
+        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
+        "IncludeInResult" : false
+      }, {
         "AttributeId" : "patient:management-info:status",
         "Value" : "NotAvailableNurseDoctor",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
@@ -53,12 +58,12 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:start-time",
-        "Value" : 1.524159618582E12,
+        "Value" : 1.524159618926E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:end-time",
-        "Value" : 1.524174018582E12,
+        "Value" : 1.524174018926E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]
@@ -79,7 +84,7 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "current-time",
-        "Value" : 1.524166818582E12,
+        "Value" : 1.524166818926E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]

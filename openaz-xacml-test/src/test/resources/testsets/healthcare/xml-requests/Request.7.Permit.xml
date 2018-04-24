@@ -7,6 +7,9 @@
         <Attribute AttributeId="role" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Doctor</AttributeValue>
         </Attribute>
+        <Attribute AttributeId="position" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">SeniorConsultant</AttributeValue>
+        </Attribute>
     </Attributes>
     <Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
         <Attribute AttributeId="resource-type" IncludeInResult="false">
@@ -16,7 +19,7 @@
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">NotAvailableNurseDoctor</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:management-info:own-emergency-policies" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">false</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">No</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:record:department" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Heart</AttributeValue>

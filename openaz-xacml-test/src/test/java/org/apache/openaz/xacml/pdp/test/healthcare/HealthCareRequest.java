@@ -14,18 +14,19 @@ public class HealthCareRequest {
 	public enum ATTRIBUTE {
 		SUBJECT_USER_ID(String.class, "Doctor-Patient", "Nurse-Patient", "Doctor-Emer-Agreement", "Doctor-Non-Patient", "Nurse-Non-Patient"),
 		SUBJECT_ROLE(String.class, "Doctor", "Nurse", "External"),
+		SUBJECT_POSITION(String.class, "SeniorConsultant", "Resident", "NurseUnitManager"),
 		SUBJECT_PARTY_TYPE(String.class, "Pharmacy", "Insurance"),
 		
 		RESOURCE_RESOURCE_TYPE(String.class, "Patient.Record"),
-		RESOURCE_RESOURCE_PATH(String.class, "Patient.Record.Billing", "Patient.Record.Medicines"),
+		RESOURCE_RESOURCE_PATH(String.class, "Patient.Record.Billing", "Patient.Record.Medicines", "Patient.Record.HealthDiagnostic"),
 		RESOURCE_PATIENT_STATUS(String.class, "NotAvailableDoctorNurse", "AvailableDoctorNurse"),
-		RESOURCE_PATIENT_OWN_EMERGENCY_POLICIES(String.class, "true", "false"),
+		RESOURCE_PATIENT_OWN_EMERGENCY_POLICIES(String.class, "Yes", "No"),
 		RESOURCE_PATIENT_RELATIVE_PASSPORT_ID(String.class, "Patient-Relative"),
 		RESOURCE_PATIENT_CONSCIOUS_STATUS(String.class, "Conscious", "Unconscious"),
 		RESOURCE_PATIENT_RECORD_DEPARTMENT(String.class, "Heart"),
 		RESOURCE_PATIENT_RECORD_ASSIGNED_DOCTOR_ID(String.class, "Doctor-Patient"),
 		RESOURCE_PATIENT_RECORD_ASSIGNED_NURSE_ID(String.class, "Doctor-Nurse"),
-		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_DOCTOR(String.class, "Doctor-Emer-Agreement"),
+		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_MEDICAL_STAFF(String.class, "Doctor-Emer-Agreement"),
 		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_RELATIVE_PASSPORT_ID(String.class, "Patient-Relative"),
 		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_START_TIME(Double.class),
 		RESOURCE_PATIENT_EMERGENCY_AGREEMENT_END_TIME(Double.class),
@@ -50,6 +51,9 @@ public class HealthCareRequest {
 	@AttributeNamespace(namespace = ATTRIBUTE.SUBJECT_ROLE)
 	@XACMLSubject(attributeId = "role")
 	public Object role;
+	@AttributeNamespace(namespace = ATTRIBUTE.SUBJECT_POSITION)
+	@XACMLSubject(attributeId = "position")
+	public Object position;
 	@AttributeNamespace(namespace = ATTRIBUTE.SUBJECT_PARTY_TYPE)
 	@XACMLSubject(attributeId = "party-type")
 	public Object partyType;
@@ -81,9 +85,9 @@ public class HealthCareRequest {
 	@AttributeNamespace(namespace = ATTRIBUTE.RESOURCE_PATIENT_RECORD_ASSIGNED_NURSE_ID)
 	@XACMLResource(attributeId="patient:record:assigned-nurse-id")
 	public Object patientRecordAssignedNurseId;
-	@AttributeNamespace(namespace = ATTRIBUTE.RESOURCE_PATIENT_EMERGENCY_AGREEMENT_DOCTOR)
-	@XACMLResource(attributeId="patient:emgergency-agreement:doctor")
-	public Object patientEmergencyAgreementDoctor;
+	@AttributeNamespace(namespace = ATTRIBUTE.RESOURCE_PATIENT_EMERGENCY_AGREEMENT_MEDICAL_STAFF)
+	@XACMLResource(attributeId="patient:emgergency-agreement:medical-staff")
+	public Object patientEmergencyAgreementMedicalStaff;
 	@AttributeNamespace(namespace = ATTRIBUTE.RESOURCE_PATIENT_EMERGENCY_AGREEMENT_RELATIVE_PASSPORT_ID)
 	@XACMLResource(attributeId="patient:emgergency-agreement:relative-passport-id")
 	public Object patientEmergencyAgreementRelativePassportId;

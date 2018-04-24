@@ -7,6 +7,9 @@
         <Attribute AttributeId="role" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Doctor</AttributeValue>
         </Attribute>
+        <Attribute AttributeId="position" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">SeniorConsultant</AttributeValue>
+        </Attribute>
     </Attributes>
     <Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
         <Attribute AttributeId="resource-type" IncludeInResult="false">
@@ -16,7 +19,7 @@
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">NotAvailableNurseDoctor</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:management-info:own-emergency-policies" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">true</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Yes</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:management-info:relative-passport-id" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Patient-Relative</AttributeValue>
@@ -27,17 +30,17 @@
         <Attribute AttributeId="patient:record:department" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Heart</AttributeValue>
         </Attribute>
-        <Attribute AttributeId="patient:emgergency-agreement:doctor" IncludeInResult="false">
+        <Attribute AttributeId="patient:emgergency-agreement:medical-staff" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Doctor-Emer-Agreement</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:emgergency-agreement:relative-passport-id" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Patient-Relative</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:emgergency-agreement:start-time" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.523694959679E12</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524159618697E12</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:emgergency-agreement:end-time" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.523709359679E12</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524174018697E12</AttributeValue>
         </Attribute>
     </Attributes>
     <Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
@@ -50,7 +53,7 @@
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Heart</AttributeValue>
         </Attribute>
         <Attribute AttributeId="current-time" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.523702159679E12</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524166818697E12</AttributeValue>
         </Attribute>
     </Attributes>
 </Request>
