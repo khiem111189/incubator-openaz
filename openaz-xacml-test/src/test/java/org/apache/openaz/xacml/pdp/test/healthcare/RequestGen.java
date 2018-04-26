@@ -50,16 +50,17 @@ public class RequestGen {
 				Map<Enum<?>, Object> map = new HashMap<Enum<?>, Object>();
 				int index = 0;
 				int stt = Integer.valueOf(items[index++]);
+				String note = items[index++];
 				Result res = Result.valueOf(items[index++]);
 				LocalDateTime now = null;
-				for (; index-2 < ATTRIBUTE.values().length; index++) {
+				for (; index - 3 < ATTRIBUTE.values().length; index++) {
 					if (index >= items.length) {
 						break;
 					} else if (items[index].isEmpty()) {
 						continue;
 					}
 
-					ATTRIBUTE att = ATTRIBUTE.values()[index-2];
+					ATTRIBUTE att = ATTRIBUTE.values()[index - 3];
 					if (att == ATTRIBUTE.ENVIRONMENT_CURRENT_TIME) {
 						if (now == null) {
 							now = LocalDateTime.now();

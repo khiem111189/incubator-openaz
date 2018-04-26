@@ -32,8 +32,8 @@
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
-        "AttributeId" : "patient:management-info:own-emergency-policies",
-        "Value" : "No",
+        "AttributeId" : "patient:management-info:conscious-status",
+        "Value" : "Conscious",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {

@@ -18,9 +18,6 @@
         <Attribute AttributeId="patient:management-info:status" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">NotAvailableNurseDoctor</AttributeValue>
         </Attribute>
-        <Attribute AttributeId="patient:management-info:own-emergency-policies" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Yes</AttributeValue>
-        </Attribute>
         <Attribute AttributeId="patient:management-info:conscious-status" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Conscious</AttributeValue>
         </Attribute>

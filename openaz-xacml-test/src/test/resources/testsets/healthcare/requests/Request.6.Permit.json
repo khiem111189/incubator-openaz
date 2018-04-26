@@ -32,11 +32,6 @@
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
         "IncludeInResult" : false
       }, {
-        "AttributeId" : "patient:management-info:own-emergency-policies",
-        "Value" : "Yes",
-        "DataType" : "http://www.w3.org/2001/XMLSchema#string",
-        "IncludeInResult" : false
-      }, {
         "AttributeId" : "patient:management-info:relative-passport-id",
         "Value" : "Patient-Relative",
         "DataType" : "http://www.w3.org/2001/XMLSchema#string",
@@ -63,12 +58,12 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:start-time",
-        "Value" : 1.524159618697E12,
+        "Value" : 1.524726459813E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       }, {
         "AttributeId" : "patient:emgergency-agreement:end-time",
-        "Value" : 1.524174018697E12,
+        "Value" : 1.524740859813E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]
@@ -89,7 +84,7 @@
         "IncludeInResult" : false
       }, {
         "AttributeId" : "current-time",
-        "Value" : 1.524166818697E12,
+        "Value" : 1.524733659813E12,
         "DataType" : "http://www.w3.org/2001/XMLSchema#double",
         "IncludeInResult" : false
       } ]

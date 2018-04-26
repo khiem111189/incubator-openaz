@@ -21,9 +21,6 @@
         <Attribute AttributeId="patient:management-info:status" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">NotAvailableNurseDoctor</AttributeValue>
         </Attribute>
-        <Attribute AttributeId="patient:management-info:own-emergency-policies" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Yes</AttributeValue>
-        </Attribute>
         <Attribute AttributeId="patient:management-info:conscious-status" IncludeInResult="false">
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Conscious</AttributeValue>
         </Attribute>
@@ -34,10 +31,10 @@
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Doctor-Emer-Agreement</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:emgergency-agreement:start-time" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524159618926E12</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524726460688E12</AttributeValue>
         </Attribute>
         <Attribute AttributeId="patient:emgergency-agreement:end-time" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524174018926E12</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524740860688E12</AttributeValue>
         </Attribute>
     </Attributes>
     <Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
@@ -50,7 +47,7 @@
             <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Heart</AttributeValue>
         </Attribute>
         <Attribute AttributeId="current-time" IncludeInResult="false">
-            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524166818926E12</AttributeValue>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">1.524733660688E12</AttributeValue>
         </Attribute>
     </Attributes>
 </Request>
